@@ -1,0 +1,421 @@
+
+{
+	"id": "ed4a146b-eb01-4d58-b817-214342d47411",
+	"name": "Consensys Exercise",
+	"allTests": [],
+	"timestamp": "2018-11-25T21:52:10.804Z",
+	"collection_id": "bf6ef384-9153-4f2c-992b-de286a1e9195",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "5d90390e-8cf2-4413-8607-bd90c04d4628",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "bf6ef384-9153-4f2c-992b-de286a1e9195",
+		"name": "Consensys Exercise",
+		"description": "Write a brief script/automation test that will effectively test the Google Geocoding API. This program should test for any behavior, edge case or performance metric that you think is relevant to maintaining an validating the REST API. You should expect that this program will be run after each deploy to ensure the API is functioning properly in a production environment.\n \nYou should provide the following:\nAll source code, test data, and executables for your script and a readme of instructions on how to run your automated test in whatever format or scripting language you prefer to use.\nThe manual test cases and test plans that your script will implement.\n \nThe program you submit should contain all the characteristics you feel are important for a well-written automation script.\n ",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"b6442b32-1b4a-4161-bd82-83e05cb34f91",
+			"b4992d2a-530b-4016-9d6a-eb01311d9a37"
+		],
+		"folders_order": [],
+		"owner": "5936057",
+		"permissions": {},
+		"favorite": true,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"value": "variable_value",
+			"key": "variable_key",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "Geocoding request and response (latitude/longitude lookup)",
+			"id": "b6442b32-1b4a-4161-bd82-83e05cb34f91",
+			"url": "https://maps.googleapis.com/maps/api/geocode/json?address=49+bogart+St,+San+brooklyn,+Ny&sensor=false&key=YOUR_API_KEY",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Status code is 200",
+				"status": "pass",
+				"No Errors": true,
+				"No Json Body Errors": true,
+				"Cookie": true,
+				"Content-Type Length": true,
+				"Latitude": true,
+				"Longitude": true,
+				"Street Check": true,
+				"City Check": true,
+				"Neighborhood": true,
+				"County": true,
+				"State": true,
+				"Country": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Json Body Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type Length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Latitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Longitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Street Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"City Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Neighborhood": {
+					"pass": 1,
+					"fail": 0
+				},
+				"County": {
+					"pass": 1,
+					"fail": 0
+				},
+				"State": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"499"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"No Errors": true,
+					"No Json Body Errors": true,
+					"Cookie": true,
+					"Content-Type Length": true,
+					"Latitude": true,
+					"Longitude": true,
+					"Street Check": true,
+					"City Check": true,
+					"Neighborhood": true,
+					"County": true,
+					"State": true,
+					"Country": true,
+					"Response time is less than 200ms": false
+				}
+			],
+			"time": "499",
+			"totalRequestTime": "499",
+			"iterationResults": {}
+		},
+		{
+			"name": "Reverse geocoding request and response (address lookup)",
+			"id": "b4992d2a-530b-4016-9d6a-eb01311d9a37",
+			"url": "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.7053762,-73.9335617&key=YOUR_API_KEY",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Status code is 200",
+				"status": "pass",
+				"No Errors": true,
+				"No Json Body Errors": true,
+				"Cookie": true,
+				"Latitude": true,
+				"Longitude": true,
+				"Street Check": true,
+				"City Check": true,
+				"Neighborhood": true,
+				"County": true,
+				"State": true,
+				"Country": true,
+				"Response time is less than 200ms": false,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Json Body Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Latitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Longitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Street Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"City Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Neighborhood": {
+					"pass": 1,
+					"fail": 0
+				},
+				"County": {
+					"pass": 1,
+					"fail": 0
+				},
+				"State": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"328"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"No Errors": true,
+					"No Json Body Errors": true,
+					"Cookie": true,
+					"Latitude": true,
+					"Longitude": true,
+					"Street Check": true,
+					"City Check": true,
+					"Neighborhood": true,
+					"County": true,
+					"State": true,
+					"Country": true,
+					"Response time is less than 200ms": false,
+					"Content-Type is present": true
+				}
+			],
+			"time": "328",
+			"totalRequestTime": "328",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 26,
+	"totalFail": 2,
+	"totalTime": 827,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Geocoding request and response (latitude/longitude lookup)",
+			"id": "b6442b32-1b4a-4161-bd82-83e05cb34f91",
+			"url": "https://maps.googleapis.com/maps/api/geocode/json?address=49+bogart+St,+San+brooklyn,+Ny&sensor=false&key=YOUR_API_KEY",
+			"time": "2018-11-25T21:52:10.804Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Json Body Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type Length": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Latitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Longitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Street Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"City Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Neighborhood": {
+					"pass": 1,
+					"fail": 0
+				},
+				"County": {
+					"pass": 1,
+					"fail": 0
+				},
+				"State": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Reverse geocoding request and response (address lookup)",
+			"id": "b4992d2a-530b-4016-9d6a-eb01311d9a37",
+			"url": "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.7053762,-73.9335617&key=YOUR_API_KEY",
+			"time": "2018-11-25T21:52:10.804Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No Json Body Errors": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Latitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Longitude": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Street Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"City Check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Neighborhood": {
+					"pass": 1,
+					"fail": 0
+				},
+				"County": {
+					"pass": 1,
+					"fail": 0
+				},
+				"State": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

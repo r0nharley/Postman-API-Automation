@@ -1,0 +1,74 @@
+//Verify that a status 200 is returned
+pm.test("Status code is 200", function () { pm.response.to.have.status(200); });
+
+
+//Verify that No errors are returned in the Json Body
+pm.test("No Errors", function () { pm.response.to.not.be.error; });
+pm.test("No Json Body Errors", function () { pm.response.to.not.have.jsonBody("error"); });
+
+
+//Cookie Check
+pm.test("Cookie Check", function () {
+pm.expect(pm.cookies.has('sessionId')).to.be.false;
+});
+
+
+//Content Type Length Check
+pm.test("Content-Type Length", function () {
+    pm.expect(pm.response.headers.get('Content-Length')).to.eql('1897');
+});
+
+
+//Latitude Check
+pm.test("Latitude", function () {
+    pm.expect(pm.response.text()).to.include("40.7053762");
+});
+
+
+//Longitude Check
+pm.test("Longitude", function () {
+    pm.expect(pm.response.text()).to.include("-73.9335617");
+});
+
+
+//Street Name Check
+pm.test("Street Check", function () {
+    pm.expect(pm.response.text()).to.include("Bogart Street");
+});
+
+
+//City Check
+pm.test("City Check", function () {
+    pm.expect(pm.response.text()).to.include("Brooklyn");
+});
+
+
+//Neighborhood Check
+pm.test("Neighborhood", function () {
+    pm.expect(pm.response.text()).to.include("East Williamsburg");
+});
+
+
+//County Check
+pm.test("County", function () {
+    pm.expect(pm.response.text()).to.include("Kings County");
+});
+
+
+//State Check
+pm.test("State", function () {
+    pm.expect(pm.response.text()).to.include("New York");
+});
+
+
+//Country Check
+pm.test("Country", function () {
+    pm.expect(pm.response.text()).to.include("United States");
+});
+
+
+//Verify that the response time is less than 200ms
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
