@@ -51,7 +51,7 @@ http://maps.googleapis.com/maps/api/geocode/json?address=49+bogart+St,+San+brook
 7. Add API key to your Geocoding reverse request.<br>
 https://maps.googleapis.com/maps/api/geocode/json?latlng=40.7053762,-73.9335617&&key='YOUR_API_KEY'
 
-8. Use the provided <a href="https://github.com/rharley77/Consensys-Exercise/tree/master/Postman%20Test%20Files"> Javascript Test Files</a> for Postman test execution.
+8. Use the provided <a href="https://github.com/rharley77/Consensys-API-Automation-Exercise/tree/master/Postman%20Test%20Files"> Javascript Test Files</a> for Postman test execution.
 
 9. Kick off an automated test with the Postman Collection Runner. <br>
 <b>Note:</b> The Consensys Exercise.postman_test_run.json file includes test run results and can be uploaded to the Postman Collection Runner. This requires you to update the You API Key with an active API key.
