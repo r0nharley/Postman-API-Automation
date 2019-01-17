@@ -1,6 +1,6 @@
 
 
-<h2>Consensys Google Geocoding API Automated Test Exercise</h2>
+<h2>Google Geocoding API Automated Test Exercise</h2>
 
 <h3>Description:</h3>
 
